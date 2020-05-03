@@ -48,7 +48,6 @@
 				9230BEAC766145616DA8B362 /* Pods-SampleSuperApp.debug.xcconfig */,
 				10BA2977595A571ABF7583E2 /* Pods-SampleSuperApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -103,7 +102,7 @@
 				849F399724597BCD001DA37D /* Sources */,
 				849F399824597BCD001DA37D /* Frameworks */,
 				849F399924597BCD001DA37D /* Resources */,
-				347150E68D92FCC47573A104 /* [CP] Embed Pods Frameworks */,
+				073FB68BDCA07C1355ED0486 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,7 +160,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		347150E68D92FCC47573A104 /* [CP] Embed Pods Frameworks */ = {
+		073FB68BDCA07C1355ED0486 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -356,6 +355,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G49R8L8WJD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SampleSuperApp",
+				);
 				INFOPLIST_FILE = SampleSuperApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -375,6 +378,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G49R8L8WJD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SampleSuperApp",
+				);
 				INFOPLIST_FILE = SampleSuperApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

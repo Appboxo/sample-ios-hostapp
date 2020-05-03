@@ -7,14 +7,22 @@
 //
 
 import UIKit
+import AppBoxoSDK
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+        AppBoxo.shared.setConfig(config: Config(clientId: "client_id"))
     }
 
-
+    @IBAction func openMiniapp(_ sender: Any) {
+        guard let miniApp = AppBoxo.shared.createMiniApp(appId: "app_od",
+                                                         payload: "payload") else { return }
+        //miniApp.delegate = self
+        miniApp.open(navigationController: navigationController!)
+    }
+    
 }
 
