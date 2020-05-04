@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         guard let miniApp = AppBoxo.shared.createMiniApp(appId: "app_od",
                                                          payload: "payload") else { return }
         //miniApp.delegate = self
-        miniApp.open(navigationController: navigationController!)
+        miniApp.open(viewController: self)
     }
     
 }
