@@ -18,8 +18,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func openMiniapp(_ sender: Any) {
-        guard let miniApp = AppBoxo.shared.createMiniApp(appId: "app_od",
-                                                         payload: "payload") else { return }
+        let miniApp = AppBoxo.shared.createMiniApp(appId: "app_od", payload: "payload")
         //miniApp.delegate = self
         miniApp.open(viewController: self)
     }
