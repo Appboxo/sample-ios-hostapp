@@ -3,16 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		849F399F24597BCD001DA37D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F399E24597BCD001DA37D /* AppDelegate.swift */; };
-		849F39A124597BCD001DA37D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F39A024597BCD001DA37D /* SceneDelegate.swift */; };
 		849F39A324597BCD001DA37D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F39A224597BCD001DA37D /* ViewController.swift */; };
 		849F39A624597BCD001DA37D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849F39A424597BCD001DA37D /* Main.storyboard */; };
 		849F39A824597BCE001DA37D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849F39A724597BCE001DA37D /* Assets.xcassets */; };
 		849F39AB24597BCE001DA37D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849F39A924597BCE001DA37D /* LaunchScreen.storyboard */; };
+		84B55D8424B475E8006A2F7C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84B55D8324B475E8006A2F7C /* GoogleService-Info.plist */; };
 		E3914997E38839668863100B /* Pods_SampleSuperApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 083CA77CA166159C7690C024 /* Pods_SampleSuperApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,12 +21,13 @@
 		10BA2977595A571ABF7583E2 /* Pods-SampleSuperApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleSuperApp.release.xcconfig"; path = "Target Support Files/Pods-SampleSuperApp/Pods-SampleSuperApp.release.xcconfig"; sourceTree = "<group>"; };
 		849F399B24597BCD001DA37D /* SampleSuperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleSuperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849F399E24597BCD001DA37D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		849F39A024597BCD001DA37D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		849F39A224597BCD001DA37D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		849F39A524597BCD001DA37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		849F39A724597BCE001DA37D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		849F39AA24597BCE001DA37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		849F39AC24597BCE001DA37D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B55D8324B475E8006A2F7C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		84B55D8524B48ADA006A2F7C /* SampleSuperApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SampleSuperApp.entitlements; sourceTree = "<group>"; };
 		9230BEAC766145616DA8B362 /* Pods-SampleSuperApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleSuperApp.debug.xcconfig"; path = "Target Support Files/Pods-SampleSuperApp/Pods-SampleSuperApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,12 +73,13 @@
 		849F399D24597BCD001DA37D /* SampleSuperApp */ = {
 			isa = PBXGroup;
 			children = (
+				84B55D8524B48ADA006A2F7C /* SampleSuperApp.entitlements */,
 				849F399E24597BCD001DA37D /* AppDelegate.swift */,
-				849F39A024597BCD001DA37D /* SceneDelegate.swift */,
 				849F39A224597BCD001DA37D /* ViewController.swift */,
 				849F39A424597BCD001DA37D /* Main.storyboard */,
 				849F39A724597BCE001DA37D /* Assets.xcassets */,
 				849F39A924597BCE001DA37D /* LaunchScreen.storyboard */,
+				84B55D8324B475E8006A2F7C /* GoogleService-Info.plist */,
 				849F39AC24597BCE001DA37D /* Info.plist */,
 			);
 			path = SampleSuperApp;
@@ -99,11 +101,11 @@
 			buildConfigurationList = 849F39AF24597BCE001DA37D /* Build configuration list for PBXNativeTarget "SampleSuperApp" */;
 			buildPhases = (
 				ED2CF386E1BFBC0E7FD89909 /* [CP] Check Pods Manifest.lock */,
-				3D02C7F2F69219303CF83D8F /* [CP] Prepare Artifacts */,
+				8F343633D3F5AD9A6503ECD1 /* [CP] Prepare Artifacts */,
 				849F399724597BCD001DA37D /* Sources */,
 				849F399824597BCD001DA37D /* Frameworks */,
 				849F399924597BCD001DA37D /* Resources */,
-				DC44EAA006B4D7660EFA58A7 /* [CP] Embed Pods Frameworks */,
+				5E9B7D2AC21B2E97241C73A2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -153,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				849F39AB24597BCE001DA37D /* LaunchScreen.storyboard in Resources */,
+				84B55D8424B475E8006A2F7C /* GoogleService-Info.plist in Resources */,
 				849F39A824597BCE001DA37D /* Assets.xcassets in Resources */,
 				849F39A624597BCD001DA37D /* Main.storyboard in Resources */,
 			);
@@ -161,24 +164,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3D02C7F2F69219303CF83D8F /* [CP] Prepare Artifacts */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SampleSuperApp/Pods-SampleSuperApp-artifacts-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Prepare Artifacts";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SampleSuperApp/Pods-SampleSuperApp-artifacts-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SampleSuperApp/Pods-SampleSuperApp-artifacts.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DC44EAA006B4D7660EFA58A7 /* [CP] Embed Pods Frameworks */ = {
+		5E9B7D2AC21B2E97241C73A2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -193,6 +179,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SampleSuperApp/Pods-SampleSuperApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F343633D3F5AD9A6503ECD1 /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SampleSuperApp/Pods-SampleSuperApp-artifacts-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SampleSuperApp/Pods-SampleSuperApp-artifacts-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SampleSuperApp/Pods-SampleSuperApp-artifacts.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ED2CF386E1BFBC0E7FD89909 /* [CP] Check Pods Manifest.lock */ = {
@@ -226,7 +229,6 @@
 			files = (
 				849F39A324597BCD001DA37D /* ViewController.swift in Sources */,
 				849F399F24597BCD001DA37D /* AppDelegate.swift in Sources */,
-				849F39A124597BCD001DA37D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +373,7 @@
 			baseConfigurationReference = 9230BEAC766145616DA8B362 /* Pods-SampleSuperApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SampleSuperApp/SampleSuperApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G49R8L8WJD;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -394,6 +397,7 @@
 			baseConfigurationReference = 10BA2977595A571ABF7583E2 /* Pods-SampleSuperApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SampleSuperApp/SampleSuperApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G49R8L8WJD;
 				FRAMEWORK_SEARCH_PATHS = (

@@ -6,5 +6,6 @@ target 'SampleSuperApp' do
   use_frameworks!
 
   pod 'AppBoxoSDK'
+  pod 'Firebase/Messaging'
 
 end
