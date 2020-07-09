@@ -5,7 +5,7 @@ target 'SampleSuperApp' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'AppBoxoSDK'
+  pod 'AppBoxoSDK', '1.3.16'
   pod 'Firebase/Messaging'
 
 end

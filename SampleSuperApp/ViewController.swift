@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func openMiniapp(_ sender: Any) {
-        let miniApp = AppBoxo.shared.createMiniApp(appId: "app_id", payload: "payload")
+        let miniApp = AppBoxo.shared.getMiniApp(appId: "app_id", authPayload: "payload", data: "data")
         miniApp.setConfig(config: MiniAppConfig())
         //miniApp.delegate = self
         miniApp.open(viewController: self)
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
             
             if let push = UserDefaults.standard.value(forKey: "Notification") as? [String : Any], let miniAppId = push["miniapp_id"] as? String {
                 UserDefaults.standard.setValue(nil, forKey: "Notification")
-                let miniApp = AppBoxo.shared.createMiniApp(appId: miniAppId, payload: "")
+                let miniApp = AppBoxo.shared.getMiniApp(appId: miniAppId, authPayload: "", data: "data")
                 miniApp.open(viewController: self)
             }
         }
