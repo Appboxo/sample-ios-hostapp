@@ -7,5 +7,6 @@ target 'SampleSuperApp' do
 
   pod 'AppBoxoSDK', '1.3.16'
   pod 'Firebase/Messaging'
-
+  pod 'Stripe'
+  
 end

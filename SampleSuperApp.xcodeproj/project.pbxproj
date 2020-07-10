@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8454953824B8251E00D221A7 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454953724B8251E00D221A7 /* CheckoutViewController.swift */; };
 		849F399F24597BCD001DA37D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F399E24597BCD001DA37D /* AppDelegate.swift */; };
 		849F39A324597BCD001DA37D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F39A224597BCD001DA37D /* ViewController.swift */; };
 		849F39A624597BCD001DA37D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849F39A424597BCD001DA37D /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		083CA77CA166159C7690C024 /* Pods_SampleSuperApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleSuperApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10BA2977595A571ABF7583E2 /* Pods-SampleSuperApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleSuperApp.release.xcconfig"; path = "Target Support Files/Pods-SampleSuperApp/Pods-SampleSuperApp.release.xcconfig"; sourceTree = "<group>"; };
+		8454953724B8251E00D221A7 /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		849F399B24597BCD001DA37D /* SampleSuperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleSuperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849F399E24597BCD001DA37D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		849F39A224597BCD001DA37D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				84B55D8524B48ADA006A2F7C /* SampleSuperApp.entitlements */,
 				849F399E24597BCD001DA37D /* AppDelegate.swift */,
 				849F39A224597BCD001DA37D /* ViewController.swift */,
+				8454953724B8251E00D221A7 /* CheckoutViewController.swift */,
 				849F39A424597BCD001DA37D /* Main.storyboard */,
 				849F39A724597BCE001DA37D /* Assets.xcassets */,
 				849F39A924597BCE001DA37D /* LaunchScreen.storyboard */,
@@ -228,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				849F39A324597BCD001DA37D /* ViewController.swift in Sources */,
+				8454953824B8251E00D221A7 /* CheckoutViewController.swift in Sources */,
 				849F399F24597BCD001DA37D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

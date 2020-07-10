@@ -16,18 +16,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnh-Ht-E9k">
-                                <rect key="frame" x="155" y="459" width="104" height="32"/>
+                                <rect key="frame" x="153.5" y="407" width="107" height="32"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <state key="normal" title="Open miniapp"/>
+                                <state key="normal" title="Demo miniapp"/>
                                 <connections>
-                                    <action selector="openMiniapp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ckg-F0-uit"/>
+                                    <action selector="openDemo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qAb-x0-W8Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0M-Sw-JS1">
+                                <rect key="frame" x="132" y="459" width="150" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Skyscanner miniapp"/>
+                                <connections>
+                                    <action selector="openSkyscanner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="edF-cb-5jn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0L-m3-dNY">
+                                <rect key="frame" x="151.5" y="511" width="111" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Appboxo Store"/>
+                                <connections>
+                                    <action selector="openStore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N81-2F-cbJ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="hnh-Ht-E9k" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="dR8-X8-rBF"/>
+                            <constraint firstItem="b0M-Sw-JS1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RMk-vU-Ina"/>
+                            <constraint firstItem="b0M-Sw-JS1" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="TI7-iK-olG"/>
+                            <constraint firstItem="l0L-m3-dNY" firstAttribute="centerX" secondItem="b0M-Sw-JS1" secondAttribute="centerX" id="ajf-HJ-6Js"/>
                             <constraint firstItem="hnh-Ht-E9k" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ekR-gb-LH0"/>
+                            <constraint firstItem="l0L-m3-dNY" firstAttribute="top" secondItem="b0M-Sw-JS1" secondAttribute="bottom" constant="20" id="wi8-rV-Abu"/>
+                            <constraint firstItem="b0M-Sw-JS1" firstAttribute="top" secondItem="hnh-Ht-E9k" secondAttribute="bottom" constant="20" id="xHH-44-eU9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

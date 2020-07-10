@@ -17,14 +17,25 @@ class ViewController: UIViewController {
     
         NotificationCenter.default.addObserver(self, selector: #selector(handlePushNotification), name: .onPushNotificationTapped, object: nil)
         
-        AppBoxo.shared.setConfig(config: Config(clientId: "client_id"))
+        AppBoxo.shared.setConfig(config: Config(clientId: "602248"))
         handlePushNotification()
     }
 
-    @IBAction func openMiniapp(_ sender: Any) {
-        let miniApp = AppBoxo.shared.getMiniApp(appId: "app_id", authPayload: "payload", data: "data")
-        miniApp.setConfig(config: MiniAppConfig())
+    @IBAction func openDemo(_ sender: Any) {
+        let miniApp = AppBoxo.shared.getMiniApp(appId: "app16973", authPayload: "payload", data: "data")
         //miniApp.delegate = self
+        miniApp.open(viewController: self)
+    }
+    
+    @IBAction func openSkyscanner(_ sender: Any) {
+        let miniApp = AppBoxo.shared.getMiniApp(appId: "app85076", authPayload: "payload", data: "data")
+        //miniApp.delegate = self
+        miniApp.open(viewController: self)
+    }
+    
+    @IBAction func openStore(_ sender: Any) {
+        let miniApp = AppBoxo.shared.getMiniApp(appId: "app36902", authPayload: "payload", data: "data")
+        miniApp.delegate = self
         miniApp.open(viewController: self)
     }
     
@@ -38,6 +49,34 @@ class ViewController: UIViewController {
                 miniApp.open(viewController: self)
             }
         }
+    }
+}
+
+extension ViewController : MiniAppDelegate {
+    func didReceiveCustomEvent(miniApp: MiniApp, params: [String : Any]) {
+        guard miniApp.appId == "app36902" else { return }
+        
+        
+        let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        
+        if var topController = keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+
+        
+            let vc = CheckoutViewController()
+            vc.delegate = self
+            topController.present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
+        }
+    }
+}
+
+extension ViewController : CheckoutViewControllerDelegate {
+    func didSuccessPayment(vc: CheckoutViewController) {
+        guard let miniApp = AppBoxo.shared.getMiniApp(appId: "app36902") else { return }
+        
+        miniApp.sendEvent(params: ["payload":["payment":"received"]])
     }
 }
 
