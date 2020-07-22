@@ -17,11 +17,12 @@ import Stripe
 let BackendUrl = "http://127.0.0.1:4242/"
 
 protocol CheckoutViewControllerDelegate {
-    func didSuccessPayment(vc: CheckoutViewController)
+    func didSuccessPayment(vc: CheckoutViewController, params: [String: Any])
 }
 
 class CheckoutViewController: UIViewController {
     
+    var params = [String : Any]()
     var delegate: CheckoutViewControllerDelegate?
     
     lazy var cardTextField: STPPaymentCardTextField = {
@@ -44,7 +45,7 @@ class CheckoutViewController: UIViewController {
             if success {
                 alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { (_) in
                     self.dismiss(animated: true) {
-                        self.delegate?.didSuccessPayment(vc: self)
+                        self.delegate?.didSuccessPayment(vc: self, params: self.params)
                     }
                 }))
             }

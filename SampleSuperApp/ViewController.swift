@@ -67,16 +67,20 @@ extension ViewController : MiniAppDelegate {
         
             let vc = CheckoutViewController()
             vc.delegate = self
+            vc.params = params
             topController.present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
         }
     }
 }
 
 extension ViewController : CheckoutViewControllerDelegate {
-    func didSuccessPayment(vc: CheckoutViewController) {
+    func didSuccessPayment(vc: CheckoutViewController, params: [String : Any]) {
         guard let miniApp = AppBoxo.shared.getMiniApp(appId: "app36902") else { return }
         
-        miniApp.sendEvent(params: ["payload":["payment":"received"]])
+        var newParams = params
+        newParams["payload"] = ["payment":"received"]
+        
+        miniApp.sendEvent(params: params)
     }
 }
 
