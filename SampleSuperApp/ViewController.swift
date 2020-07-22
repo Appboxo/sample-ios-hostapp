@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
         NotificationCenter.default.addObserver(self, selector: #selector(handlePushNotification), name: .onPushNotificationTapped, object: nil)
         
-        AppBoxo.shared.setConfig(config: Config(clientId: "602248"))
+        AppBoxo.shared.setConfig(config: Config(clientId: "352131"))
         handlePushNotification()
     }
 
