@@ -71,6 +71,26 @@ extension ViewController : MiniAppDelegate {
             topController.present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
         }
     }
+    
+    func onLaunch(miniApp: MiniApp) {
+        print("onLaunchMiniApp: \(miniApp.appId)")
+    }
+    
+    func onResume(miniApp: MiniApp) {
+        print("onResumeMiniApp: \(miniApp.appId)")
+    }
+    
+    func onPause(miniApp: MiniApp) {
+        print("onPauseMiniApp: \(miniApp.appId)")
+    }
+    
+    func onClose(miniApp: MiniApp) {
+        print("onCloseMiniApp: \(miniApp.appId)")
+    }
+    
+    func onError(miniApp: MiniApp, message: String) {
+        print("onErrorMiniApp: \(miniApp.appId) message: \(message)")
+    }
 }
 
 extension ViewController : CheckoutViewControllerDelegate {
