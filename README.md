@@ -60,78 +60,78 @@
    
 **Swift**
     
-    AppBoxo.shared.setConfig(config: Config(clientId: "client_id"))
+    Appboxo.shared.setConfig(config: Config(clientId: "client_id"))
     
 **Objective-C**
   
-    [[AppBoxo shared] setConfig:[[Config alloc] initWithClientId: @"client_id"]];
+    [[Appboxo shared] setConfig:[[Config alloc] initWithClientId: @"client_id"]];
   
   
   
   
   
     
-**To open Miniapps, write this code in your ViewController**
+**To open miniapps, write this code in your ViewController**
 
 **Swift**
     
     import AppBoxoSDK
     
-    let miniApp = AppBoxo.shared.getMiniApp(appId: "app_id", authPayload: "auth_payload", data: "data")
-    miniApp.open(viewController: self)
+    let miniapp = Appboxo.shared.getMiniapp(appId: "app_id", authPayload: "auth_payload", data: "data")
+    miniapp.open(viewController: self)
 
 
 **Objective-C**
 
     #import "AppBoxoSDK/AppBoxoSDK-Swift.h"
     
-    MiniApp *miniApp = [[AppBoxo shared] getMiniAppWithAppId:@"app_id" authPayload:@"auth_payload" data:@"data"];
-    [miniApp openWithViewController:self];
+    Miniapp *miniapp = [[Appboxo shared] getMiniappWithAppId:@"app_id" authPayload:@"auth_payload" data:@"data"];
+    [miniapp openWithViewController:self];
     
     
     
     
     
 
-**Handle custom events from miniApp.**
+**Handle custom events from miniapp.**
 
 **Swift**
 
-    miniApp.delegate = self
+    miniapp.delegate = self
     
-and implement MiniAppDelegate
+and implement MiniappDelegate
     
-    extension ViewController: MiniAppDelegate {
-        func didReceiveCustomEvent(miniApp: MiniApp, params: [String : Any]) {
+    extension ViewController: MiniappDelegate {
+        func didReceiveCustomEvent(miniapp: Miniapp, params: [String : Any]) {
             let params = [
                 "message" : "message",
                 "id" : 1,
                 "checked" : true
             ]
-            miniApp.sendEvent(params: params)
+            miniapp.sendEvent(params: params)
         }
     }
     
 **Objective-C**
 
-    [miniApp setDelegate:self];
+    [miniapp setDelegate:self];
     
-and implement MiniAppDelegate
+and implement MiniappDelegate
      
-     @interface ViewController () <MiniAppDelegate>
+     @interface ViewController () <MiniappDelegate>
      //...
      @end
      
     @implementation ViewController
     //...
 
-     - (void)didReceiveCustomEventWithMiniApp:(MiniApp *)miniApp params:(NSDictionary<NSString *,id> *)params {
+     - (void)didReceiveCustomEventWithMiniapp:(Miniapp *)miniapp params:(NSDictionary<NSString *,id> *)params {
          NSDictionary *dict = @{
              @"message" : @"message",
              @"id" : @1,
              @"checked" : @YES
          };
-         [miniApp sendEventWithParams:dict];
+         [miniapp sendCustomEventWithParams:dict];
      }
 
      @end
@@ -143,63 +143,63 @@ and implement MiniAppDelegate
 
 **Swift**
 
-    miniApp.delegate = self
+    miniapp.delegate = self
         
-and implement MiniAppDelegate
+and implement MiniappDelegate
         
-    extension ViewController: MiniAppDelegate {
-        func onLaunch(miniApp: MiniApp) {
-            print("onLaunchMiniApp: \(miniApp.appId)")
+    extension ViewController: MiniappDelegate {
+        func onLaunch(miniapp: Miniapp) {
+            print("onLaunchMiniapp: \(miniapp.appId)")
         }
         
-        func onResume(miniApp: MiniApp) {
-            print("onResumeMiniApp: \(miniApp.appId)")
+        func onResume(miniapp: Miniapp) {
+            print("onResumeMiniapp: \(miniapp.appId)")
         }
         
-        func onPause(miniApp: MiniApp) {
-            print("onPauseMiniApp: \(miniApp.appId)")
+        func onPause(miniapp: Miniapp) {
+            print("onPauseMiniapp: \(miniapp.appId)")
         }
         
-        func onClose(miniApp: MiniApp) {
-            print("onCloseMiniApp: \(miniApp.appId)")
+        func onClose(miniapp: Miniapp) {
+            print("onCloseMiniapp: \(miniapp.appId)")
         }
         
-        func onError(miniApp: MiniApp, message: String) {
-            print("onErrorMiniApp: \(miniApp.appId) message: \(message)")
+        func onError(miniapp: Miniapp, message: String) {
+            print("onErrorMiniapp: \(miniapp.appId) message: \(message)")
         }
     }
     
 **Objective-C**
 
-    [miniApp setDelegate:self];
+    [miniapp setDelegate:self];
     
-and implement MiniAppDelegate
+and implement MiniappDelegate
      
-     @interface ViewController () <MiniAppDelegate>
+     @interface ViewController () <MiniappDelegate>
      //...
      @end
      
     @implementation ViewController
     //...
 
-     - (void)onLaunchMiniApp:(MiniApp *)miniApp {
-         NSLog(@"onLaunchMiniApp: %@",miniApp.appId);
+     - (void)onLaunchMiniapp:(Miniapp *)miniapp {
+         NSLog(@"onLaunchMiniapp: %@",miniapp.appId);
      }
 
-     - (void)onResumeMiniApp:(MiniApp *)miniApp {
-         NSLog(@"onResumeMiniApp: %@",miniApp.appId);
+     - (void)onResumeMiniapp:(Miniapp *)miniapp {
+         NSLog(@"onResumeMiniapp: %@",miniapp.appId);
      }
 
-     - (void)onPauseMiniApp:(MiniApp *)miniApp {
-         NSLog(@"onPauseMiniApp: %@",miniApp.appId);
+     - (void)onPauseMiniapp:(Miniapp *)miniapp {
+         NSLog(@"onPauseMiniapp: %@",miniapp.appId);
      }
 
-     - (void)onCloseMiniApp:(MiniApp *)miniApp {
-         NSLog(@"onCloseMiniApp: %@",miniApp.appId);
+     - (void)onCloseMiniapp:(Miniapp *)miniapp {
+         NSLog(@"onCloseMiniapp: %@",miniapp.appId);
      }
 
-     - (void)onErrorMiniApp:(MiniApp *)miniApp message:(NSString *)message {
-         NSLog(@"onErrorMiniApp: %@ message: %@",miniApp.appId,message);
+     - (void)onErrorMiniapp:(Miniapp *)miniapp message:(NSString *)message {
+         NSLog(@"onErrorMiniapp: %@ message: %@",miniapp.appId,message);
      }
 
      @end
@@ -211,15 +211,19 @@ To logout from all the miniapps within your mobile application use this method
     
 **Swift**
 
-    AppBoxo.shared.logout()
+    Appboxo.shared.logout()
 
 **Objective-C**
 
-    [[AppBoxo shared] logout];
+    [[Appboxo shared] logout];
+    
+    
+
+Here is an example project: https://github.com/Appboxo/ios-sample-superapp
 
 
 
 
 ## License
 
-AppBoxo is available under the Apache 2.0 license. [See LICENSE](https://github.com/Appboxo/ios-sdk-binary/blob/master/LICENSE) for details..
+AppBoxo is available under the MIT license. See the LICENSE file for more info.
