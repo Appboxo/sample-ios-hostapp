@@ -100,7 +100,7 @@ extension ViewController : CheckoutViewControllerDelegate {
         var newParams = params
         newParams["payload"] = ["payment":"received"]
         
-        miniapp.sendEvent(params: params)
+        miniapp.sendCustomEvent(params: params)
     }
 }
 
