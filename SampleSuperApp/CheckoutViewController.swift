@@ -106,7 +106,7 @@ class CheckoutViewController: UIViewController {
         // Collect card details on the client
         let cardParams = cardTextField.cardParams
         let paymentMethodParams = STPPaymentMethodParams(card: cardParams, billingDetails: nil, metadata: nil)
-        STPAPIClient.shared().createPaymentMethod(with: paymentMethodParams) { [weak self] paymentMethod, error in
+        STPAPIClient.shared.createPaymentMethod(with: paymentMethodParams) { [weak self] paymentMethod, error in
             // Create PaymentMethod failed
             if let createError = error {
                 self?.displayAlert(title: "Payment failed", message: createError.localizedDescription)
@@ -165,7 +165,7 @@ class CheckoutViewController: UIViewController {
                 // Payment requires additional action
             else if clientSecret != nil && requiresAction == true && self != nil {
                 let paymentHandler = STPPaymentHandler.shared()
-                paymentHandler.handleNextAction(forPayment: clientSecret!, authenticationContext: self!, returnURL: nil) { status, paymentIntent, handleActionError in
+                paymentHandler.handleNextAction(forPayment: clientSecret!, with: self!, returnURL: nil) { status, paymentIntent, handleActionError in
                     switch (status) {
                     case .failed:
                         self?.displayAlert(title: "Payment failed", message: handleActionError?.localizedDescription ?? "")

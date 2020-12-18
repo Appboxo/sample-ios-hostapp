@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7rc-KO-Qmj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7rc-KO-Qmj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,41 +17,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnh-Ht-E9k">
-                                <rect key="frame" x="153.5" y="407" width="107" height="32"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <state key="normal" title="Demo miniapp"/>
-                                <connections>
-                                    <action selector="openDemo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qAb-x0-W8Q"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0M-Sw-JS1">
-                                <rect key="frame" x="132" y="459" width="150" height="32"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <state key="normal" title="Skyscanner miniapp"/>
-                                <connections>
-                                    <action selector="openSkyscanner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="edF-cb-5jn"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0L-m3-dNY">
-                                <rect key="frame" x="151.5" y="511" width="111" height="32"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <state key="normal" title="Appboxo Store"/>
-                                <connections>
-                                    <action selector="openStore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N81-2F-cbJ"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5TU-eH-hDa">
+                                <rect key="frame" x="0.0" y="367.5" width="414" height="215"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnh-Ht-E9k">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="oko-dt-bDU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <state key="normal" title="Demo miniapp"/>
+                                        <connections>
+                                            <action selector="openDemo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qAb-x0-W8Q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0M-Sw-JS1">
+                                        <rect key="frame" x="0.0" y="55" width="414" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="N4d-lS-qwa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <state key="normal" title="Skyscanner miniapp"/>
+                                        <connections>
+                                            <action selector="openSkyscanner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="edF-cb-5jn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0L-m3-dNY">
+                                        <rect key="frame" x="0.0" y="110" width="414" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="IVf-gu-CVn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <state key="normal" title="Appboxo Store miniapp"/>
+                                        <connections>
+                                            <action selector="openStore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N81-2F-cbJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvR-0t-cPO">
+                                        <rect key="frame" x="0.0" y="165" width="414" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Ov4-F9-9cf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <state key="normal" title="Agoda miniapp"/>
+                                        <connections>
+                                            <action selector="openAgoda:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gOc-oZ-itm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="b0M-Sw-JS1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RMk-vU-Ina"/>
-                            <constraint firstItem="b0M-Sw-JS1" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="TI7-iK-olG"/>
-                            <constraint firstItem="l0L-m3-dNY" firstAttribute="centerX" secondItem="b0M-Sw-JS1" secondAttribute="centerX" id="ajf-HJ-6Js"/>
-                            <constraint firstItem="hnh-Ht-E9k" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ekR-gb-LH0"/>
-                            <constraint firstItem="l0L-m3-dNY" firstAttribute="top" secondItem="b0M-Sw-JS1" secondAttribute="bottom" constant="20" id="wi8-rV-Abu"/>
-                            <constraint firstItem="b0M-Sw-JS1" firstAttribute="top" secondItem="hnh-Ht-E9k" secondAttribute="bottom" constant="20" id="xHH-44-eU9"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5TU-eH-hDa" secondAttribute="trailing" id="1UR-nw-pfi"/>
+                            <constraint firstItem="5TU-eH-hDa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bIp-6Q-5g5"/>
+                            <constraint firstItem="5TU-eH-hDa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nQq-GC-IXx"/>
+                            <constraint firstItem="5TU-eH-hDa" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="oIY-hA-nul"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Hw6-aR-mOo"/>
                 </viewController>
@@ -76,4 +101,9 @@
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
