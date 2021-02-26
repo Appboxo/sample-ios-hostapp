@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0377303525E91E9C00E5E964 /* AgodaInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0377303425E91E9C00E5E964 /* AgodaInfo.swift */; };
 		8454953824B8251E00D221A7 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454953724B8251E00D221A7 /* CheckoutViewController.swift */; };
 		849F399F24597BCD001DA37D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F399E24597BCD001DA37D /* AppDelegate.swift */; };
 		849F39A324597BCD001DA37D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F39A224597BCD001DA37D /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0377303425E91E9C00E5E964 /* AgodaInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgodaInfo.swift; sourceTree = "<group>"; };
 		083CA77CA166159C7690C024 /* Pods_SampleSuperApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleSuperApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10BA2977595A571ABF7583E2 /* Pods-SampleSuperApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleSuperApp.release.xcconfig"; path = "Target Support Files/Pods-SampleSuperApp/Pods-SampleSuperApp.release.xcconfig"; sourceTree = "<group>"; };
 		8454953724B8251E00D221A7 /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				849F39A924597BCE001DA37D /* LaunchScreen.storyboard */,
 				84B55D8324B475E8006A2F7C /* GoogleService-Info.plist */,
 				849F39AC24597BCE001DA37D /* Info.plist */,
+				0377303425E91E9C00E5E964 /* AgodaInfo.swift */,
 			);
 			path = SampleSuperApp;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			files = (
 				849F39A324597BCD001DA37D /* ViewController.swift in Sources */,
 				8454953824B8251E00D221A7 /* CheckoutViewController.swift in Sources */,
+				0377303525E91E9C00E5E964 /* AgodaInfo.swift in Sources */,
 				849F399F24597BCD001DA37D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +371,7 @@
 					"$(PROJECT_DIR)/SampleSuperApp",
 				);
 				INFOPLIST_FILE = SampleSuperApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -391,6 +396,7 @@
 					"$(PROJECT_DIR)/SampleSuperApp",
 				);
 				INFOPLIST_FILE = SampleSuperApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
