@@ -22,19 +22,22 @@ class ViewController: UIViewController {
     }
 
     @IBAction func openDemo(_ sender: Any) {
-        let miniapp = Appboxo.shared.getMiniapp(appId: "app16973", authPayload: "payload")
+        let miniapp = Appboxo.shared.getMiniapp(appId: "app16973")
+        miniapp.setAuthPayload(authPayload: "payload")
         miniapp.delegate = self
         miniapp.open(viewController: self)
     }
     
     @IBAction func openSkyscanner(_ sender: Any) {
-        let miniapp = Appboxo.shared.getMiniapp(appId: "app85076", authPayload: "payload")
+        let miniapp = Appboxo.shared.getMiniapp(appId: "app85076")
+        miniapp.setAuthPayload(authPayload: "payload")
         //miniapp.delegate = self
         miniapp.open(viewController: self)
     }
     
     @IBAction func openStore(_ sender: Any) {
-        let miniapp = Appboxo.shared.getMiniapp(appId: "app36902", authPayload: "payload")
+        let miniapp = Appboxo.shared.getMiniapp(appId: "app36902")
+        miniapp.setAuthPayload(authPayload: "payload")
         miniapp.delegate = self
         miniapp.open(viewController: self)
     }
@@ -45,7 +48,7 @@ class ViewController: UIViewController {
             
             if let push = UserDefaults.standard.value(forKey: "Notification") as? [String : Any], let miniappId = push["miniapp_id"] as? String {
                 UserDefaults.standard.setValue(nil, forKey: "Notification")
-                let miniapp = Appboxo.shared.getMiniapp(appId: miniappId, authPayload: "")
+                let miniapp = Appboxo.shared.getMiniapp(appId: miniappId)
                 miniapp.open(viewController: self)
             }
         }
@@ -95,7 +98,7 @@ extension ViewController : MiniappDelegate {
 
 extension ViewController : CheckoutViewControllerDelegate {
     func didSuccessPayment(vc: CheckoutViewController, params: [String : Any]) {
-        guard let miniapp = Appboxo.shared.getMiniapp(appId: "app36902") else { return }
+        guard let miniapp = Appboxo.shared.getExistingMiniapp(appId: "app36902") else { return }
         
         var newParams = params
         newParams["payload"] = ["payment":"received"]
