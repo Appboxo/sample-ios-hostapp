@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k4h-F5-YRd">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="K8M-iL-c1W">
+            <objects>
+                <viewController id="k4h-F5-YRd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dq5-Uf-ZXT">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_powered_by_boxo" translatesAutoresizingMaskIntoConstraints="NO" id="cL0-ay-jkG">
+                                <rect key="frame" x="104" y="758" width="185" height="36"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="szW-tx-iky"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="szW-tx-iky" firstAttribute="bottom" secondItem="cL0-ay-jkG" secondAttribute="bottom" constant="24" id="0ZA-DY-ZIV"/>
+                            <constraint firstItem="cL0-ay-jkG" firstAttribute="centerX" secondItem="szW-tx-iky" secondAttribute="centerX" id="QSn-N9-ivl"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nno-Yv-F5w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="211" y="-1063"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_powered_by_boxo" width="184.33332824707031" height="36"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

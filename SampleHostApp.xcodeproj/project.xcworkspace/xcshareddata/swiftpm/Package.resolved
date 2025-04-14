@@ -1,0 +1,15 @@
+{
+  "originHash" : "a94b30270cc039b04fa8dfcf0be6adbf0fb0a15ef48d2221909b53ea56056e90",
+  "pins" : [
+    {
+      "identity" : "appboxo-ios-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Appboxo/appboxo-ios-spm.git",
+      "state" : {
+        "revision" : "85107176550216707b8814f88da7c8fc66d18559",
+        "version" : "1.9.2"
+      }
+    }
+  ],
+  "version" : 3
+}
