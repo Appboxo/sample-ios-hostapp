@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import AppBoxoSDK
+import BoxoSDK
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         let config = Config(clientId: "CLIENT_ID")
-        Appboxo.shared.setConfig(config: config)
+        Boxo.shared.setConfig(config: config)
         
         return true
     }

@@ -1,13 +1,13 @@
 {
-  "originHash" : "a94b30270cc039b04fa8dfcf0be6adbf0fb0a15ef48d2221909b53ea56056e90",
+  "originHash" : "3db0f50c2c369da8703b1f6406d694c28b53ebbd275e99f5fef517e3f3ce78ea",
   "pins" : [
     {
-      "identity" : "appboxo-ios-spm",
+      "identity" : "boxo-ios-spm",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Appboxo/appboxo-ios-spm.git",
+      "location" : "https://github.com/Appboxo/boxo-ios-spm.git",
       "state" : {
-        "revision" : "85107176550216707b8814f88da7c8fc66d18559",
-        "version" : "1.9.2"
+        "revision" : "01bf8aef9cc09d47b39a897eef0da969ae794bf1",
+        "version" : "1.10.2"
       }
     }
   ],

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import AppBoxoSDK
+import BoxoSDK
 
 class TableViewController: UITableViewController {
 
@@ -33,7 +33,7 @@ class TableViewController: UITableViewController {
     }
     
     @objc func getMiniapps() {
-        Appboxo.shared.getMiniapps { [weak self] miniapps, error in
+        Boxo.shared.getMiniapps { [weak self] miniapps, error in
             guard let self = self else { return }
             self.tableView.refreshControl?.endRefreshing()
             
@@ -77,7 +77,7 @@ class TableViewController: UITableViewController {
         
         guard let appId = miniapps[indexPath.row].appId else { return }
         
-        let miniapp = Appboxo.shared.getMiniapp(appId: appId)
+        let miniapp = Boxo.shared.getMiniapp(appId: appId)
         miniapp.delegate = self
         miniapp.open(viewController: self)
     }

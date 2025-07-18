@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		030BB7A52DA834A800880962 /* AppBoxoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 030BB7A42DA834A800880962 /* AppBoxoSDK */; };
+		03B494BE2E2A338C0021CD45 /* BoxoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 03B494BD2E2A338C0021CD45 /* BoxoSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				030BB7A52DA834A800880962 /* AppBoxoSDK in Frameworks */,
+				03B494BE2E2A338C0021CD45 /* BoxoSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +83,7 @@
 			);
 			name = SampleHostApp;
 			packageProductDependencies = (
-				030BB7A42DA834A800880962 /* AppBoxoSDK */,
+				03B494BD2E2A338C0021CD45 /* BoxoSDK */,
 			);
 			productName = SampleHostApp;
 			productReference = 030BB7832DA8330400880962 /* SampleHostApp.app */;
@@ -114,7 +114,7 @@
 			mainGroup = 030BB77A2DA8330400880962;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				030BB7A32DA834A800880962 /* XCRemoteSwiftPackageReference "appboxo-ios-spm" */,
+				03B494BC2E2A338C0021CD45 /* XCRemoteSwiftPackageReference "boxo-ios-spm" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 030BB7842DA8330400880962 /* Products */;
@@ -348,21 +348,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		030BB7A32DA834A800880962 /* XCRemoteSwiftPackageReference "appboxo-ios-spm" */ = {
+		03B494BC2E2A338C0021CD45 /* XCRemoteSwiftPackageReference "boxo-ios-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Appboxo/appboxo-ios-spm.git";
+			repositoryURL = "https://github.com/Appboxo/boxo-ios-spm.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.9.2;
+				minimumVersion = 1.10.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		030BB7A42DA834A800880962 /* AppBoxoSDK */ = {
+		03B494BD2E2A338C0021CD45 /* BoxoSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 030BB7A32DA834A800880962 /* XCRemoteSwiftPackageReference "appboxo-ios-spm" */;
-			productName = AppBoxoSDK;
+			package = 03B494BC2E2A338C0021CD45 /* XCRemoteSwiftPackageReference "boxo-ios-spm" */;
+			productName = BoxoSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
